@@ -58,16 +58,31 @@
 //     result1 = "Незачет";
 // strintg result2 = score >= 60 ? "Зачет" : "Незачет";
 
-Console.WriteLine("Введите ваш возраст: ");
-int age = int.Parse(Console.ReadLine());
-string ageGroup = age >= 18 ? "Совершенно летний": "Несовершеннолетний";
-Console.WriteLine($"Вы {ageGroup}.");
-Console.Write("\nВведите температуру за окном(C): ");
-double temp = double.Parse(Console.ReadLine());
-string weather = temp >= 20 ? "тепло" : (temp >= 0 ? "Прохладно" : "Мороз");
-Console.WriteLine($"За окном {weather}.");
+// Console.WriteLine("Введите ваш возраст: ");
+// int age = int.Parse(Console.ReadLine());
+// string ageGroup = age >= 18 ? "Совершенно летний": "Несовершеннолетний";
+// Console.WriteLine($"Вы {ageGroup}.");
+// Console.Write("\nВведите температуру за окном(C): ");
+// double temp = double.Parse(Console.ReadLine());
+// string weather = temp >= 20 ? "тепло" : (temp >= 0 ? "Прохладно" : "Мороз");
+// Console.WriteLine($"За окном {weather}.");
 
-Console.Write("\nВведите число: ");
-int n = int.Parse(Console.ReadLine());
-string parity = n % 2 == 0 ? "четное" : "нечетное";
-Console.WriteLine($"Число {n} - {parity}.");
+// Console.Write("\nВведите число: ");
+// int n = int.Parse(Console.ReadLine());
+// string parity = n % 2 == 0 ? "четное" : "нечетное";
+// Console.WriteLine($"Число {n} - {parity}.");
+
+Console.WriteLine("Меню");
+Console.WriteLine("1. Посмотреть расписание");
+Console.WriteLine("2. Посмотреть оценки");
+Console.WriteLine("3. Связаться с преподавателем");
+Console.WriteLine("4. Выйти");
+Console.Write("Выберите пункт (1-4): ");
+
+String choice = Console.ReadLine();
+switch (choice) {
+    case "1":
+        Console.WriteLine("Расписание: ИСП-244, кабю 102, 08:30");
+        break;
+    case "2"
+}
