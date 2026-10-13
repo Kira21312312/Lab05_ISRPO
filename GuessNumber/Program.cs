@@ -123,57 +123,109 @@
 // 🎉
 // 🔥 🌡 🌀 ❄ , , , , ↑, ↓
 
-Random random = new Random();
-int secret = random.Next(1, 101);
+// Random random = new Random();
+// int secret = random.Next(1, 101);
 
-int attempts = 0;
-bool guessed = false;
+// int attempts = 0;
+// bool guessed = false;
 
-Console.WriteLine("Угадай число (1-100)");
-Console.WriteLine("Я загадал число. попробуй угадать");
+// Console.WriteLine("Угадай число (1-100)");
+// Console.WriteLine("Я загадал число. попробуй угадать");
 
 
 
-String GetHint(int difference) {
-    switch (difference) {
-        case <= 3:
-            return "Горячо";
-        case <= 10:
-            return "Тепло";
-        case <= 25:
-            return "Прохладно";
-        default:
-            return "Холодно";
-    }
+// String GetHint(int difference) {
+//     switch (difference) {
+//         case <= 3:
+//             return "Горячо";
+//         case <= 10:
+//             return "Тепло";
+//         case <= 25:
+//             return "Прохладно";
+//         default:
+//             return "Холодно";
+//     }
+// }
+
+// while (!guessed) {
+//     Console.Write($"Попытка {attempts + 1}. Твой вариант: ");
+//     string input = Console.ReadLine();
+//     if (!int.TryParse(input, out int guess)) {
+//         Console.WriteLine("Введите целое число, а не текст");
+//         continue;
+//     }
+//     if (guess < 1 || guess > 100) {
+//         Console.WriteLine("Число должно входить в диапозон");
+//         continue;
+//     }
+
+//     if (guess < secret) {
+//         int diff = secret - guess;
+//         string hint = GetHint(diff);
+//         Console.WriteLine($"Больше {hint}\n");
+//     }
+//     else if (guess > secret) {
+//         int diff = guess - secret ;
+//         string hint = GetHint(diff);
+//         Console.WriteLine($"Меньше {hint}\n");
+//     }
+//     else {
+//         guessed = true;
+//     }
+// }
+// string result = attempts <= 7 ? $"Отличный результат! Всего {attempts} попыток." : $"Число найдено за {attempts} попыток. Можно лучше!";
+
+// Console.WriteLine($"Правильно, Загаданое число: {secret}");
+// Console.WriteLine($"{result}");
+
+
+Console.WriteLine("Введите пароль и подтвирждение");
+string password1 = Console.ReadLine();
+string password2 = Console.ReadLine();
+
+if (password1 == password2) {
+    Console.WriteLine("Пароль принят");
+}
+else {
+    Console.WriteLine("Пароль не принят");
 }
 
-while (!guessed) {
-    Console.Write($"Попытка {attempts + 1}. Твой вариант: ");
-    string input = Console.ReadLine();
-    if (!int.TryParse(input, out int guess)) {
-        Console.WriteLine("Введите целое число, а не текст");
-        continue;
-    }
-    if (guess < 1 || guess > 100) {
-        Console.WriteLine("Число должно входить в диапозон");
-        continue;
-    }
-
-    if (guess < secret) {
-        int diff = secret - guess;
-        string hint = GetHint(diff);
-        Console.WriteLine($"Больше {hint}\n");
-    }
-    else if (guess > secret) {
-        int diff = guess - secret ;
-        string hint = GetHint(diff);
-        Console.WriteLine($"Меньше {hint}\n");
-    }
-    else {
-        guessed = true;
-    }
+Console.WriteLine("Скилько лет: ");
+string a = Console.ReadLine();
+if (a < 18) {
+    Console.WriteLine("Доступ запрещён");
 }
-string result = attempts <= 7 ? $"Отличный результат! Всего {attempts} попыток." : $"Число найдено за {attempts} попыток. Можно лучше!";
+else {
+    Console.WriteLine("Доступ разрешён");
+}
 
-Console.WriteLine($"Правильно, Загаданое число: {secret}");
-Console.WriteLine($"{result}");
+Console.WriteLine("Введите 2 числа и операчию: ");
+int dig1 = int.Parse(Console.ReadLine());
+int dig2 = int.Parse(Console.ReadLine());
+string op = Console.ReadLine();
+
+switch (op) {
+    case "+":
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 + dig2}")
+        break;
+    case "-":
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 - dig2}")
+        break;
+    case "*":
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 * dig2}")
+        break;
+    case "/":
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 / dig2}")
+        break;
+
+}
+
+
+int dig1 = int.Parse(Console.ReadLine());
+int dig2 = int.Parse(Console.ReadLine());
+int dig3 = int.Parse(Console.ReadLine());
+
+int d = 0;
+for (int i = 0; i<3; i++) {
+    int
+}
