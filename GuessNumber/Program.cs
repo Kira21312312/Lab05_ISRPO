@@ -191,7 +191,7 @@ else {
 }
 
 Console.WriteLine("Скилько лет: ");
-string a = Console.ReadLine();
+int a = int.Parse(Console.ReadLine());
 if (a < 18) {
     Console.WriteLine("Доступ запрещён");
 }
@@ -206,26 +206,72 @@ string op = Console.ReadLine();
 
 switch (op) {
     case "+":
-        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 + dig2}")
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 + dig2}");
         break;
     case "-":
-        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 - dig2}")
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 - dig2}");
         break;
     case "*":
-        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 * dig2}")
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 * dig2}");
         break;
     case "/":
-        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 / dig2}")
+        Console.WriteLine($"{dig1} {op} {dig2} = {dig1 / dig2}");
         break;
 
 }
 
 
-int dig1 = int.Parse(Console.ReadLine());
-int dig2 = int.Parse(Console.ReadLine());
-int dig3 = int.Parse(Console.ReadLine());
+// Только положительные
 
-int d = 0;
+int count = 0;
 for (int i = 0; i<3; i++) {
-    int
+    int d = int.Parse(Console.ReadLine());
+
+    if (d > 0) {
+    count += dig1;
 }
+
+}
+Console.WriteLine(count);
+
+
+// ИГра
+
+Console.WriteLine("Вы ищете сокровища данжер мастера, выберите Путь(A, B): ");
+string way = Console.ReadLine();
+if (way == "A")
+{
+    Console.WriteLine("Загадка: Кто не дышит, но живёт; хоть не нужно — много пьёт; и вжизни, и в смерти тело как лёд.");
+    Console.WriteLine("Ответ: ");
+    string answer = Console.ReadLine();
+    if (answer == "рыба")
+    {
+        Console.WriteLine("Вы прошли дальше");
+    }
+    else
+    {
+        Console.WriteLine("вас сьели");
+    }
+}
+else if (way == "B")
+{
+    Console.WriteLine("Вы вошли в комнату с двумя дверьми выберите дверь(A,B): ");
+    string door = Console.ReadLine();
+    if (door == "A")
+    {
+         Console.WriteLine("Вы ношли сокровища Dungeon Master’а.");
+    }
+    else if (door == "B")
+    {
+         Console.WriteLine("Вы умерли из за яда, лол");
+    }
+    else
+    {
+        Console.WriteLine("Че? Че ты написал?");
+    }
+}
+else
+{
+    Console.WriteLine("Че? Че ты написал?");
+}
+
